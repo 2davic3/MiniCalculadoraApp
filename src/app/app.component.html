@@ -1,8 +1,44 @@
-<h1>{{title}}</h1>
-<form>
-  numero1: <input type="number" [(ngModel)]="numero1" name="numero1"><br>
-  numero2: <input type="number" [(ngModel)]="numero2" name="numero2"><br>
-  <input type="submit" value="Sumar" (click)="sumar()" class="btn btn-outline-success">
-  <input type="submit" value="Restar" (click)="restar()" class="btn btn-outline-warning">
-</form>
-<p>Resultado: {{resultado}}</p>
+<div class="fondo" name="fondo">
+  <h1>{{title}}</h1>
+    <input type="submit" value="CE" (click)="eliminar()" class="btn btn-outline-danger">
+    <input type="text" value="{{resultado}}" disabled>
+  <div class="row">
+    <div class="col-3">
+      <form>
+        <h1>{{title5}}</h1>
+        Primer numero: <input type="number" [(ngModel)]="numero1" name="numero1"><br>
+        Segundo numero:<input type="number" [(ngModel)]="numero2" name="numero2"><br>
+        <input type="submit" value="Sumar" (click)="sumar()" class="btn btn-outline-success">
+        <input type="submit" value="Restar" (click)="restar()" class="btn btn-outline-warning">
+        <input type="submit" value="Multiplicacion" (click)="multiplicar()" class="btn btn-outline-danger">
+        <input type="submit" value="Divsion" (click)="dividir()" class="btn btn-outline-info">
+        <br><br>
+      </form>
+    </div>
+    <div class="col-3">
+      <form>
+        <h1>{{title2}}</h1><br>
+        Función trigonometricas: <input type="number" [(ngModel)]="trigonometicas" name="trigonometicas"><br>
+        <input type="submit" value="Secante" (click)="secante()" class="btn btn-outline-info">
+        <input type="submit" value="Cosecante" (click)="cosecante()" class="btn btn-outline-info">
+        <input type="submit" value="Cotangente" (click)="cotangente()" class="btn btn-outline-info">
+        <input type="submit" value="Pi" (click)="pi()" class="btn btn-outline-primary">
+      </form>
+    </div>
+    <div class="col-3">
+      <form>  
+        <h1>{{title3}}</h1><br>
+        Raiz a operar: <input type="number" [(ngModel)]="raiz2" name="numero2"><br>
+        Numero dentro de la Raiz: <input type="number" [(ngModel)]="raiz1" name="numero1"><br>
+        <input type="submit" value="Raiz" (click)="calcularRaiz()" class="btn btn-outline-success">
+      </form>
+    </div>
+    <div class="col-3">
+      <form> 
+        <h1>{{title4}}</h1><br>
+        Logaritmo Natural de: <input type="number" [(ngModel)]="logaritmo" name="logaritmo"><br>
+        <input type="submit" value="logaritmoNatural" (click)="logaritmoNatural()" class="btn btn-outline-warning">
+      </form>
+    </div>
+  </div>
+</div>
